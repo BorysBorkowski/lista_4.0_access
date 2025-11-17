@@ -1,0 +1,44 @@
+zad.1
+
+SELECT
+    kategoria
+FROM
+    gry
+GROUP BY
+    kategoria
+
+zad.2
+
+SELECT
+    ocena AS [różne oceny]
+FROM
+    oceny
+GROUP BY
+    ocena
+
+zad.3
+
+SELECT
+    nazwisko AS [unikalne_nazwiska]
+FROM
+    gracze
+GROUP BY
+    nazwisko
+ORDER BY
+    nazwisko ASC
+
+zad.4
+
+SELECT
+    nazwisko + " " + imie AS [unikalne_nazwiska]
+FROM
+    gracze
+GROUP BY
+    nazwisko,
+    imie
+ORDER BY
+    nazwisko,
+    imie ASC
+
+zad.5
+

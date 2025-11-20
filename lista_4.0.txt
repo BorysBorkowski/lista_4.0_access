@@ -42,3 +42,60 @@ ORDER BY
 
 zad.5
 
+SELECT
+    kategoria,
+    COUNT(*)
+FROM
+    gry
+GROUP BY
+    kategoria
+
+zad.6
+
+SELECT
+    id_gry,
+    MIN(ocena) AS [min_ocena]
+FROM
+    oceny
+GROUP BY
+    id_gry
+
+zad.7
+
+SELECT
+    imie,
+    count(*) AS [ilosc]
+FROM
+    gracze
+GROUP BY
+    imie
+ORDER BY
+    count(*) DESC
+
+zad.8
+
+SELECT
+    stan,
+    ROUND(AVG(ocena,), 2) AS [srednia ocen]
+FROM
+    oceny
+GROUP BY
+    stan
+ORDER BY
+    ROUND(AVG(ocena,), 2) ASC
+
+zad.9
+
+SELECT
+    id_gry,
+    stan,
+    ocena,
+    COUNT(*) AS [ilosc unikalnych opini]
+FROM
+    oceny
+GROUP BY
+    id_gry,
+    stan,
+    ocena
+ORDER BY
+    COUNT(*) DESC
